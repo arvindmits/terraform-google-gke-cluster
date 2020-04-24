@@ -134,7 +134,7 @@ EOF
 }
 
 variable "master_ipv4_cidr_block" {
-  type = string
+  type    = string
   default = "172.16.0.0/28"
 
   description = <<EOF
@@ -156,7 +156,7 @@ EOF
 }
 
 variable "http_load_balancing_disabled" {
-  type = string
+  type    = string
   default = "false"
 
   description = <<EOF
@@ -173,7 +173,7 @@ variable "master_authorized_networks_cidr_blocks" {
     {
       # External network that can access Kubernetes master through HTTPS. Must
       # be specified in CIDR notation. This block should allow access from any
-      # address, but is given explicitly to prevernt Google's defaults from
+      # address, but is given explicitly to prevent Google's defaults from
       # fighting with Terraform.
       cidr_block = "0.0.0.0/0"
       # Field for users to identify CIDR blocks.
@@ -188,7 +188,7 @@ EOF
 }
 
 variable "stackdriver_logging" {
-  type = "string"
+  type    = "string"
   default = "true"
 
   description = <<EOF
@@ -202,7 +202,7 @@ variable "stackdriver_monitoring" {
   default = "true"
 
   description = <<EOF
-Whether Stackdriver Kubernetes montioring is enabled. This should only be set to
-"false" if another montioring solution is set up.
+Whether Stackdriver Kubernetes monitoring is enabled. This should only be set to
+"false" if another monitoring solution is set up.
 EOF
 }
